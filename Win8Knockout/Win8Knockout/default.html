@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Win8Knockout</title>
+
+    <!-- WinJS references -->
+    <link href="//Microsoft.WinJS.1.0/css/ui-dark.css" rel="stylesheet" />
+    <script src="//Microsoft.WinJS.1.0/js/base.js"></script>
+    <script src="//Microsoft.WinJS.1.0/js/ui.js"></script>
+
+    <!-- Win8Knockout references -->
+    <link href="/css/default.css" rel="stylesheet" />
+    <script src="/js/default.js"></script>
+
+    <script src="Scripts/require.js" data-main="js/app.js"></script>
+</head>
+<body>
+    <h1>Win8 Knockout</h1>
+    <input type="button" value="Add New" data-bind="{click: add}"/>
+    <ul data-bind="{foreach: cars}">
+        <div>
+            <span>Year: <span data-bind="{text: year}"></span></span>
+            <span>Make: <span data-bind="{text: make}"></span></span>
+            <span>Model: <span data-bind="{text: model}"></span></span>
+            <hr/>
+        </div>
+    </ul>
+</body>
+</html>

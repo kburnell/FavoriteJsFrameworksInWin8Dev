@@ -1,0 +1,25 @@
+﻿<CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <Title>j15</Title>
+    <Author>Microsoft Corporation</Author>
+    <Shortcut>j15</Shortcut>
+    <Description>Code snippet for console.log</Description>
+    <SnippetTypes>
+      <SnippetType>Expansion</SnippetType>
+    </SnippetTypes>
+  </Header>
+  <Snippet>
+    <Code Language="JavaScript"><![CDATA[
+     
+    $$("#side-bar").on("click", "li", function(data) {
+        var id = $$(this).data("id");
+        $$("#side-bar, #dataCanvas").toggle();
+        var user = users[id];
+        tab_profile(user);
+        tab_repos(user);
+        $$("#tabs").tabs();
+    });
+
+    ]]></Code>
+  </Snippet>
+</CodeSnippet>

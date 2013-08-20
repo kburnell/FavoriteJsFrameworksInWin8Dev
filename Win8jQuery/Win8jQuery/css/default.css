@@ -1,4 +1,6 @@
-﻿body {
+﻿
+
+body {
 }
 
 #app-container header {
@@ -13,15 +15,15 @@
     left: 10px;
 }
 
-#side-bar ul {
-    list-style: none;
-    margin-left: 100px;
-}
+    #side-bar ul {
+        list-style: none;
+        margin-left: 100px;
+    }
 
-#side-bar li {
-    float: left;
-    margin: 20px;
-}
+    #side-bar li {
+        float: left;
+        margin: 20px;
+    }
 
 #dataCanvas {
     display: none;
@@ -46,15 +48,15 @@
     color: #00f !important;
 }
 
-.repoItem:hover {
-    cursor: pointer;
-    font-weight: bold;
-    text-decoration: underline;
-}
+    .repoItem:hover {
+        cursor: pointer;
+        font-weight: bold;
+        text-decoration: underline;
+    }
 
 .tabBackButton {
- background-color: #000000 !important; 
- color: #ffffff !important;
+    background-color: #000000 !important;
+    color: #ffffff !important;
 }
 
 @media screen and (-ms-view-state: fullscreen-landscape) {
@@ -67,6 +69,7 @@
     #side-bar ul {
         margin-left: 0;
     }
+
     #side-bar img {
         width: 175px;
     }

@@ -2,12 +2,12 @@
 <Package xmlns="http://schemas.microsoft.com/appx/2010/manifest">
 
   <Identity
-    Name="cf3fe690-949c-4795-a769-2322e9da1890"
+    Name="b75d59ab-462e-4d07-9dca-67a44e50f47e"
     Version="1.0.0.0"
     Publisher="CN=kburnell" />
 
   <Properties>
-    <DisplayName>App1</DisplayName>
+    <DisplayName>Win8Knockout</DisplayName>
     <PublisherDisplayName>kburnell</PublisherDisplayName>
     <Logo>images\storelogo.png</Logo>
   </Properties>
@@ -27,10 +27,10 @@
       StartPage="default.html">
 
       <VisualElements
-        DisplayName="App1"
+        DisplayName="Win8Knockout"
         Logo="images\logo.png"
         SmallLogo="images\smalllogo.png"
-        Description="App1"
+        Description="Win8Knockout"
         ForegroundText="light"
         BackgroundColor="#464646">
 

@@ -1,4 +1,5 @@
-﻿$(function() {
+﻿$(function () {
+    
     var users = {
         "User1": { userName: "KBurnell" },
         "User2": { userName: "CSell5" },
@@ -6,20 +7,9 @@
 
     populateUsers(users);
 
-    function populateUsers(userList) {
-        $.each(userList, function(i, user) {
-            amplify.request("github.User", { id: user.userName }, function(data) {
-                users[i].profile = data;
-                var li = $("<li></li>", { "data-id": i }).html($("<img></img>", {
-                    src: data.avatar_url + "&s=300",
-                    alt: data.name
-                }));
-                $("#side-bar ul").append(li);
-            });
-        });
-    }
 
-    $("#side-bar").on("click", "li", function(data) {
+
+    $("#side-bar").on("click", "li", function (data) {
         var id = $(this).data("id");
         $("#side-bar, #dataCanvas").toggle();
         var user = users[id];
@@ -28,7 +18,26 @@
         $("#tabs").tabs();
     });
 
+
+    
+
 });
+
+
+function populateUsers(userList) {
+    $.each(userList, function (i, user) {
+        amplify.request("github.User", { id: user.userName }, function (data) {
+            userList[i].profile = data;
+            var li = $("<li></li>", { "data-id": i }).html($("<img></img>", {
+                src: data.avatar_url + "&s=300",
+                alt: data.name
+            }));
+            $("#side-bar ul").append(li);
+        });
+    });
+}
+
+
 
 var tab_profile = function (user) {
     var tab = $("#profile");
@@ -47,14 +56,18 @@ var tab_repos = function (user) {
         var reposList = tab.find("#reposList");
         reposList.html("");
         tab.find("#name").text(user.profile.name + "'s Repos");
-        tab.find(".tabBackButton").unbind("click").on("click", function() {
+        tab.find(".tabBackButton").unbind("click").on("click", function () {
             $("#side-bar, #dataCanvas").toggle();
         });
-        amplify.request("github.Repos", { id: user.userName }, function(data) {
+        amplify.request("github.Repos", { id: user.userName }, function (data) {
             user.repos = data;
-            $.each(data, function(i, repo) {
+            $.each(data, function (i, repo) {
                 reposList.append("<li><a class='repoItem' href='" + repo.html_url + "'>" + repo.name + "</a></li>");
             });
         });
     }
 };
+
+
+
+

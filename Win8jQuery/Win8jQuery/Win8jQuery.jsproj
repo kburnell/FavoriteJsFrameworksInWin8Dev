@@ -135,6 +135,8 @@
     <Content Include="Scripts\jquery-2.0.3.min.map" />
     <Content Include="Scripts\jquery-ui-1.10.3.js" />
     <Content Include="Scripts\jquery-ui-1.10.3.min.js" />
+    <Content Include="Scripts\knockout-2.3.0.debug.js" />
+    <Content Include="Scripts\knockout-2.3.0.js" />
     <Content Include="Scripts\MIT-LICENSE.txt" />
     <Content Include="Scripts\README.txt" />
     <None Include="Win8jQuery_TemporaryKey.pfx" />

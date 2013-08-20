@@ -1,4 +1,5 @@
-﻿var api_url = "https://api.github.com/users/";
+﻿
+var api_url = "https://api.github.com/users/";
 
 amplify.request.define("github.User", "ajax", {
     url: api_url + "{id}",
@@ -6,7 +7,7 @@ amplify.request.define("github.User", "ajax", {
 });
 
 amplify.request.define("github.Repos", "ajax", {
-    url: api_url + "{id}/repos" ,
+    url: api_url + "{id}/repos",
     type: "GET"
 });
 

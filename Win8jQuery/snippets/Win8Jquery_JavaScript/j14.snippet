@@ -1,0 +1,45 @@
+﻿<CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <Title>j14</Title>
+    <Author>Microsoft Corporation</Author>
+    <Shortcut>j14</Shortcut>
+    <Description>Code snippet for console.log</Description>
+    <SnippetTypes>
+      <SnippetType>Expansion</SnippetType>
+    </SnippetTypes>
+  </Header>
+  <Snippet>
+    <Code Language="JavaScript"><![CDATA[
+     
+    var tab_profile = function (user) {
+    var tab = $$("#profile");
+    tab.find("#name").text(user.profile.name);
+    tab.find("#avatar").attr("src", user.profile.avatar_url);
+    tab.find(".tabBackButton").unbind("click").on("click", function () {
+       $$("#side-bar, #dataCanvas").toggle();
+    });
+    tab.find("#userName").text(user.profile.login);
+    tab.find("#company").text(user.profile.company);
+};
+
+var tab_repos = function (user) {
+    if (!user.repos) {
+        var tab = $$("#repos");
+        var reposList = tab.find("#reposList");
+        reposList.html("");
+        tab.find("#name").text(user.profile.name + "'s Repos");
+        tab.find(".tabBackButton").unbind("click").on("click", function() {
+            $$("#side-bar, #dataCanvas").toggle();
+        });
+        amplify.request("github.Repos", { id: user.userName }, function(data) {
+            user.repos = data;
+            $$.each(data, function(i, repo) {
+                reposList.append("<li><a class='repoItem' href='" + repo.html_url + "'>" + repo.name + "</a></li>");
+            });
+        });
+    }
+};
+
+    ]]></Code>
+  </Snippet>
+</CodeSnippet>

@@ -1,0 +1,29 @@
+﻿<CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <Title>j13</Title>
+    <Author>Microsoft Corporation</Author>
+    <Shortcut>j13</Shortcut>
+    <Description>Code snippet for console.log</Description>
+    <SnippetTypes>
+      <SnippetType>Expansion</SnippetType>
+    </SnippetTypes>
+  </Header>
+  <Snippet>
+    <Code Language="JavaScript"><![CDATA[
+     
+    function populateUsers(userList) {
+    $$.each(userList, function (i, user) {
+        amplify.request("github.User", { id: user.userName }, function (data) {
+            userList[i].profile = data;
+            var li = $$("<li></li>", { "data-id": i }).html($$("<img></img>", {
+                src: data.avatar_url + "&s=300",
+                alt: data.name
+            }));
+            $$("#side-bar ul").append(li);
+        });
+    });
+}
+
+    ]]></Code>
+  </Snippet>
+</CodeSnippet>
