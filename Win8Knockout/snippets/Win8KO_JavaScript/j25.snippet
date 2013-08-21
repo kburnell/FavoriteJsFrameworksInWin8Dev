@@ -1,8 +1,17 @@
-﻿define(["jquery", "knockout"], function($, ko) {
-
-    var carsList = ko.observableArray();
-
-    function callAFakeServiceToGetSomeCars() {
+﻿<CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <Title>j25</Title>
+    <Author>Microsoft Corporation</Author>
+    <Shortcut>j25</Shortcut>
+    <Description>Code snippet for console.log</Description>
+    <SnippetTypes>
+      <SnippetType>Expansion</SnippetType>
+    </SnippetTypes>
+  </Header>
+  <Snippet>
+    <Code Language="JavaScript"><![CDATA[
+    
+      function callAFakeServiceToGetSomeCars() {
         var data = [
             { id: 1, year: 2012, make: "Ferrari", model: "California" },
             { id: 2, year: 2012, make: "Ferrari", model: "458 Italia" },
@@ -12,24 +21,11 @@
             { id: 6, year: 2012, make: "McLaren", model: "MP14-12C" },
             { id: 7, year: 2012, make: "Koenigsegg", model: "CCX" }
         ];
-        $.each(data, function(index,car) {
+        $$.each(data, function(index,car) {
             carsList.push(car);
         });
     }
     
-
-
-    function addCar() {
-        var car = { id: 8, year: 2013, make: "Foo", model: "Bar" };
-        carsList.push(car);
-    }
-
-
-
-    return {
-        cars: carsList,
-        getCars: callAFakeServiceToGetSomeCars,
-        add: addCar
-};
-
-});
+    ]]></Code>
+  </Snippet>
+</CodeSnippet>

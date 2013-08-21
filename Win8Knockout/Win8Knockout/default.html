@@ -16,6 +16,8 @@
     <script src="Scripts/require.js" data-main="js/app.js"></script>
 </head>
 <body>
+
+
     <h1>Win8 Knockout</h1>
     <input type="button" value="Add New" data-bind="{click: add}"/>
     <ul data-bind="{foreach: cars}">
@@ -23,8 +25,10 @@
             <span>Year: <span data-bind="{text: year}"></span></span>
             <span>Make: <span data-bind="{text: make}"></span></span>
             <span>Model: <span data-bind="{text: model}"></span></span>
-            <hr/>
+            <hr />
         </div>
     </ul>
+
+
 </body>
 </html>

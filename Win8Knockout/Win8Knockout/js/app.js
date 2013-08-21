@@ -1,4 +1,5 @@
-﻿require.config({
+﻿
+require.config({
     paths: {
         jquery: "../Scripts/jquery-2.0.3",
         knockout: "../Scripts/knockout-2.3.0",
@@ -6,8 +7,9 @@
     }
 });
 
-require(["jquery", "knockout", "cars"], function ($, ko, cars) {
 
+
+require(["jquery", "knockout", "cars"], function ($, ko, cars) {
     cars.getCars();
 
     function App() {
@@ -15,9 +17,12 @@ require(["jquery", "knockout", "cars"], function ($, ko, cars) {
         this.add = cars.add;
     }
 
+
+
     $(function () {
 
         ko.applyBindings(new App());
 
     });
+   
 });
